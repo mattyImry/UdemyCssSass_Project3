@@ -4,6 +4,29 @@
     margin: 15rem 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    //grid-template-columns: repeat(3, 1fr); // colomns created not responsive
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));// created same column as above but responsive with the use of auto-fit and minmax function
     grid-gap: 6rem;
+    align-items: start;
+}
+
+.feature {
+
+    display:grid;
+
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary; //changin color to svg
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2; // if using -1 to define rows or column it is only working on axplicit grids
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
