@@ -14,6 +14,11 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+// RESPONSIVE BREACKPOINTS
+
+$bp-largest: 75em;  //1200px/16px
+$bp-large: 62.5em; //1000px/16px
+
 *,
 *::before,
 *::after {
@@ -24,7 +29,12 @@ $font-display: 'Josefin Sans', sans-serif;
 
 html {
     box-sizing: border-box;  //The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
-    font-size: 62.5%;  // 10px/16px = 62.5%   16px is the browser default
+    font-size: 62.5%;  // 10px/16px = 62.5%  1rem=10px, 16px is the browser default, because of this if we reduce font-size in mediaquery we reduce evrthing
+
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -39,5 +49,9 @@ body {
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content); //creating  rows
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];                                                                              //creating columns                                                                                         using minmax function, max size 14 rem but never below min-content 
 
-    
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows:6rem 80vh min-content 40vw repeat(3, min-content); 
+        grid-template-columns:[full-start] minmax(6rem, 1fr) [center-start]
+        repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end];                                                                               
+    }
 }
