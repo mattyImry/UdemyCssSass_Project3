@@ -15,14 +15,9 @@
     font-size: 4rem;
     font-style: italic;
     line-height: 1;
-     &--light {
-        color:$color-grey-light-1;
-    }
 
-    &--dark {
-        color:$color-grey-dark-1;
-    }
-
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
 }
 
 .heading-3 {
@@ -36,13 +31,8 @@
     @extend %heading;
     font-size: 1.9rem;
 
-    &--light {
-        color:$color-grey-light-1;
-    }
-
-    &--dark {
-        color:$color-grey-dark-1;
-    }
+    &--light { color: $color-grey-light-1; }
+    &--dark { color: $color-grey-dark-1; }
 }
 
 .btn {
@@ -62,18 +52,7 @@
     }
 }
 
-.mb-sm {
-    margin-bottom: 2rem;
-}
-
-.mb-md {
-    margin-bottom: 3rem;
-}
-
-.mb-lg {
-    margin-bottom: 4rem;
-}
-
-.mb-hg {
-    margin-bottom: 8rem;
-}
+.mb-sm { margin-bottom: 2rem; }
+.mb-md { margin-bottom: 3rem; }
+.mb-lg { margin-bottom: 4rem; }
+.mb-hg { margin-bottom: 8rem; }

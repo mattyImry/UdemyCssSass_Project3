@@ -3,13 +3,15 @@
     grid-column: full-start / full-end;
 
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(7, 5vw);
+    /*grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);*/
+    grid-template: repeat(7, 5vw) / repeat(8, 1fr);
+
+
     grid-gap: 1.5rem;
     padding: 1.5rem;
-    
-    &__item { //setting grid and fit pictures to grid!!!
 
+    &__item {
         &--1 {
             grid-row: 1 / span 2;
             grid-column: 1 / span 2;
@@ -77,18 +79,14 @@
 
         &--14 {
             grid-row: 6 / span 2;
-            grid-column: 8 /-1;
+            grid-column: 8 / -1;
         }
     }
 
     &__img {
         width: 100%;
         height: 100%;
-        object-fit: cover; // to use objetc -fit you need to create a parent element and give it a hight and width
+        object-fit: cover;
         display: block;
-    }
-
-    & > * {
-        
     }
 }
